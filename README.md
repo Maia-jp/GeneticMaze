@@ -14,7 +14,7 @@ In this way, each generation approaches a solution: and thus a population of sim
 Should such a program use a lot of power then?
 The answer is no. This program made in javascript can be run on any PC with minimum requirements such as a connection to the internet and a browser
 
-To execute it just download the folder and open the file "index.html"
+To execute it just download the folder and open the file "main.html"
 preferably with Google Chrome
 
 ### More info
