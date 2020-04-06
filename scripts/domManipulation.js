@@ -13,7 +13,7 @@ function updatePopulation(){
 
 //Receive the generation and show it on the screen above the canvas
 function updateGeneration(generation){
-    document.getElementById("generation").innerText = "Generation: " + generation;
+    document.getElementById("generation").innerText = generation;
 }
 //Receive the best score and show in the side menu
 function updateScore(population){
