@@ -19,3 +19,7 @@ preferably with Google Chrome
 
 ### More info
 For more information, access the detailInfo.html file
+
+
+
+by Joao Pedro Maia
