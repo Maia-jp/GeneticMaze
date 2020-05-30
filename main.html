@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic maze</title>
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+    <!-- configuration file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="main.html" style="font-family:ABeeZee, sans-serif;color:#6d28aa;font-size:34px;">Genetic Maze</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav"></ul>
+        </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" role="dialog" tabindex="-1" id="modalInfo">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color:#59118e;font-family:ABeeZee, sans-serif;">Info</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p style="font-family:Roboto, sans-serif;">You can draw obstacles or generate them randomly in the grid below <br>Units learn through generations to get from one end to the other (blue cells) <br>Each generation is made up of small individuals, units: <br> - The red ones are
+                        normal units, offspring of the previous generation <br> -Purples are mutated offspring <br> - Yellow is the best person found so far</p><a href="detailInfo.html">New tab for more information</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-top:21px;">
+        <div class="container" style="padding-top:0;box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
+            <div class="row">
+                <div class="col-md-8 col-lg-3 col-xl-2" style="padding-right:27px;background-color:#59118e;"></div>
+                <div class="col-md-4 col-lg-9 col-xl-10">
+                    <h3 style="color:#6d28aa;padding-top:12px;font-family:ABeeZee, sans-serif;" >Generation <i style="color:#6d28aa;padding-top:12px;font-family:ABeeZee, sans-serif;" id="generation">1</i> <i class="fa fa-info-circle float-right" onclick="icnModal()"></i></h3> 
+                    <hr>
+                    
+                    <div id="teste" class="teste"  width="920" height="920" style="width:920;height:920;"></div>
+                    
+                        
+                        <button class="btn btn-outline-light btn-block" type="button" style="margin-top:12px;background-color:#6d28aa;font-family:ABeeZee, sans-serif;" onclick="btnStart()">Start</button><button class="btn btn-outline-light btn-block"
+                        type="button" style="margin-top:12px;margin-right:0px;margin-left:0;background-color:#6d28aa;font-family:ABeeZee, sans-serif;"onclick="btnRandom()">Random walls</button>
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Geral Info</h5>
+                        </div>
+                        <div class="card-body" style="font-family:Roboto, sans-serif;">
+                            <div class="row">
+                                <div class="col">
+                                    <p style="padding-top:6px;" id="bestScore">Best score: 0</p>
+                                    <p id="bestSolution">Best solution: none</p>
+                                </div>
+                                <div class="col-xl-6">
+                                    <p style="padding:6px;" id="winners">Winners: 0</p>
+                                    <p id="totalWinners">Total winners: 0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:12px;">
+                        <div class="card-header">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Population Settings</h5>
+                        </div>
+                        <div class="card-body" style="font-family:Roboto, sans-serif;">
+                            <div class="row">
+                                <div class="col">
+                                    <p style="padding-top:6px;" id="size">Size: 76</p>
+                                    <p id="lifespan">Lifespan: 728</p>
+                                </div>
+                                <div class="col">
+                                    <p style="padding-top:6px;" id="mutationRate" >Mutation Rate: 0.1</p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card"  style="margin-top:12px;">
+                        <div class="card-header">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Graphic</h5>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="myChart" width="400" height="400"></canvas>
+                            <p class="card-text">-</p><button class="btn btn-outline-light" type="button" style="background-color:#6d28aa;font-family:ABeeZee, sans-serif;" onclick="btnExport()">Export in .csv</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="https://github.com/Maia-jp/GeneticMaze"><i class="icon ion-social-github"></i></a><a href="info.html"><i class="icon ion-information-circled"></i></a></div>
+            <p class="copyright" style="font-family:Roboto, sans-serif;font-size:16px;">Coded By Joao P Maia</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <!-- Scripts-->    
+
+    <!-- configuration file-->
+    <script src="./scripts/config.js"></script>
+
+    <!-- DOM manipulation file-->
+    <script src="./scripts/domManipulation.js"></script>
+
+    <!-- configuration file-->
+    <script src="./scripts/graphic.js"></script>
+        
+    <!-- P5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+
+    <!-- Unit -->
+    <script src="./scripts/unity.js"></script>
+
+    <!-- Grid -->
+    <script src="./scripts/grid.js"></script>
+
+    <!-- Genetics -->
+    <script src="./scripts/genetic.js"></script>
+
+    <!-- Movement -->
+    <script src="./scripts/movement.js"></script>
+
+    <!-- Main Code -->
+    <script src='./scripts/main.js'></script>
+</body>
+
+</html>
