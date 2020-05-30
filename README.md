@@ -8,10 +8,10 @@ The instructions here will make the project run on your machine. For more code a
 
 ### Prerequisites
 
-*An average computer
-*A browser
-*Internet connection
-
+ - An average computer
+ - A browser
+ -  Internet connection
+  
 ### Installing
 
 The program was made entirely using pure javascript (including some graphic libraries listed below) so to run it just download the entire folder and open the file *'main.html'*
