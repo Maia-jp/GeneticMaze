@@ -8,7 +8,9 @@ The instructions here will make the project run on your machine. For more code a
 
 ### Prerequisites
 
-An average computer and a browser
+*An average computer
+*A browser
+*Internet connection
 
 ### Installing
 
