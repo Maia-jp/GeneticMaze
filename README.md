@@ -1,25 +1,41 @@
-### Genetic Maze
-Can machines learn? if so, how much processing power is needed?
-Seeking to demonstrate the answers to these questions, I developed the Genetic Maze project. 
-A program that allows you to demonstrate the learning power of a machine in a simple problem: getting from one end to the other of a "maze". Learning is done through a concept known with a genetic algorithm.
+# Genetic Maze
 
-### What is a genetic algorithm?
-In short, a genetic algorithm (aka GA) simulates natural selection to solve an optimization problem.
-For this purpose, several organisms are created, in our case "red" cells.
-Each red cell receives a gene, which is nothing more than a series of instructions on how to move through the maze.
-The cells are grouped in generations that live for a certain time, at the end of life the best, that is, those that came closest to a solution are chosen to pass their genes on to the next generation (their children)
-In this way, each generation approaches a solution: and thus a population of simulated individuals learns to solve a certain problem.
+Can machines learn? if so, how much processing power is needed? Seeking to demonstrate the answers to these questions, I developed the Genetic Maze project. A program that uses the concept of *Genetic Algorithm* to make a machine learn to perform a specific task: *Transpose a maze*
 
-### Installation
-Should such a program use a lot of power then?
-The answer is no. This program made in javascript can be run on any PC with minimum requirements such as a connection to the internet and a browser
+## Getting Started
 
-To execute it just download the folder and open the file "main.html"
-preferably with Google Chrome
+The instructions here will make the project run on your machine. For more code and development information check the documentation folders as well as the *\detailInfo.html* file
 
-### More info
-For more information, access the detailInfo.html file
+### Prerequisites
+
+An average computer and a browser
+
+### Installing
+
+The program was made entirely using pure javascript (including some graphic libraries listed below) so to run it just download the entire folder and open the file *'main.html'*
+By default this file will open a page in your default browser, from there you can generate a maze (or create your own) for the cells to try to transpose.
+I recommend using Google Chrome for the app.
+
+### Changing some parameters
+If you want to be able to change some features of the program, such as the cell learning rate, mutation ratio and a number of other things.
+All settings are found in the *\ scripts \ config.js file*
+
+This is an example of a parameter:
+
+    'lineSize': 0.3,  //Size of the line dividing the cells of the grid || Default is 0.3
+To change it, just change the value after the colon, in this case it would be 0.3
+All parameters have their Default value and a description
 
 
+## Libraries used in this project
 
-by Joao Pedro Maia
+* [P5.js]([https://p5js.org/](https://p5js.org/)) - Used in the graphic part to draw various elements
+* [Chart.js]([https://www.chartjs.org/](https://www.chartjs.org/)) - Using to render the charts
+
+## Author
+
+* **João P Maia** - *the complete program* 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
