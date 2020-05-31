@@ -10,7 +10,6 @@ The instructions here will make the project run on your machine. For more code a
 
  - An average computer
  - A browser
- -  Internet connection
   
 ### Installing
 
