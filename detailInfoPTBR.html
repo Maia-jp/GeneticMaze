@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic maze</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="main.html" style="font-family:ABeeZee, sans-serif;color:#6d28aa;font-size:34px;">Genetic Maze</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav"></ul>
+        </div>
+        </div>
+    </nav>
+    <div style="padding-top:21px;">
+        <div class="container" style="padding-top:0;box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
+            <div class="row">
+                <div class="col-md-8 col-lg-3 col-xl-2" style="padding-right:27px;background-color:#59118e;"></div>
+                <div class="col-md-4 col-lg-9 col-xl-10">
+                    <h2 style="font-family:ABeeZee, sans-serif;color:#6d28aa;">Como funciona ?</h2>
+                    <hr>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Algorítimos Genéticos<br></h5>
+                        </div>
+                        <div class="card-body" style="font-family:Roboto, sans-serif;">
+                            <div class="row">
+                                <div class="col">
+                                    <p style="font-family:Roboto, sans-serif;">Algorítimos Genéticos usam o conceito de evolução da biologia para resolução de problemas da computação! Existem diversos problemas onde esses algoritmos podem ser usados como o famoso “Problema do cacheiro viajante”. No caso desse programa o objetivo é percorrer um labirinto.</p>
+                                    <p>Para conseguir resolver um dado problema esses algorítimos simulam o processo de evolução que ocorre em diversas gerações. Em suma cada geração recebe um conjunto de instruções, ao final do seu ciclo de vida os melhores indivíduos (escolhidos de acordo com um critério) são escolhidos para juntar seus “genes” (instruções) para a próxima geração.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:12px;">
+                        <div class="card-header">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Os Indivíduos<br></h5>
+                        </div>
+                        <div class="card-body" style="font-family:Roboto, sans-serif;">
+                            <div class="row">
+                                <div class="col">
+                                    <p style="padding-top:6px;">Nesse programa as ações são feitas pequenos indivíduos (“Unit”) que são representados por pontos dentro do labirinto..</p>
+                                    <p>Cada ponto possui um código genético único e pode (ou não) passar seus genes para próxima geração. Cada um desses pontos “vive” por uma geração.</p>
+                                    <p>Cada individuo pertence a uma das 3 categorias. Pontos vermelhos são indivíduos normais; roxos, sofreram mutação a partir da geração anterior. Amarelos são os melhores indivíduos até agora</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top:0;margin-top:12px;">
+                        <div class="card-header" style="font-family:ABeeZee, sans-serif;">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Código Genético<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;">Quando são criadas, cada individuo/unidade recebe um código genético. Esse código nada mais é do que uma série de genes que representam instruções.</p>
+                            <p style="font-family:Roboto, sans-serif;">No nosso programa essas instruções são números de 1 a 4 que representam possíveis ações dentro do tabuleiro. 1-Direita; 2-Desce; 3-Esquerda; 4-Sobe;</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top:0px;margin-top:12px;">
+                        <div class="card-header" style="font-family:ABeeZee, sans-serif;">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Crossover<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;">No final da "vida" desses indivíduos os melhores são escolhidos para fazer crossover.</p>
+                            <p style="font-family:Roboto, sans-serif;">Crossover é o processo de juntar duas sequencias genéticas (conjunto de instruções) em um novo individuo que pertencera a próxima geração.</p>
+                            <p style="font-family:Roboto, sans-serif;">Exemplo, Se temos os seguintes códigos: A-[1,2,3,4] e B-[1,1,1,1], caso seja feito um crossover um dos possíveis resultados seria C-[1,1,3,4]. C faria parte da próxima geração.</p>
+                            <p style="font-family:Roboto, sans-serif;">As mesmas unidades podem fazer crossover diversas vezes.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top:0px;margin-top:12px;">
+                        <div class="card-header" style="font-family:ABeeZee, sans-serif;">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Geração<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;">O conceito de geração é similar ao de biologia. Uma geração é composta por individuo que são filhos da geração anterior (com exceção da primeira geração).</p>
+                            <p style="font-family:Roboto, sans-serif;">Dentro da população que compõe uma geração os melhores indivíduos são selecionados para passar seus genes para próxima geração.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top:0px;margin-top:12px;">
+                        <div class="card-header" style="font-family:ABeeZee, sans-serif;">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Fitness<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;">Fitness é o valor que mede a performance de um individuo na resolução do labirinto. Esse valor define o quão bem um "célula" se saiu</p>
+                            <p style="font-family:Roboto, sans-serif;">Atualmente esse valor é calculado pela distância entre o individuo e o final do labirinto.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top:0px;margin-top:12px;">
+                        <div class="card-header" style="font-family:ABeeZee, sans-serif;">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Mutação<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;">Mutação é um processo de suma importância para gerar diversidade. Esse processo evita que o algoritmo fique preso em um máximo/mínimo local.</p>
+                            <p style="font-family:Roboto, sans-serif;">A cada geração existe uma pequena possibilidade de um crossover acontecer e todos os genes serem alterados para algo novo.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding-top:0px;margin-top:12px;">
+                        <div class="card-header" style="font-family:ABeeZee, sans-serif;">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Contribuindo para o projeto !<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;">Acredito que esse projeto é uma otima oportunidade de aprender como algoritmos geneticos funcionam. Incentivo a todos que gostaram da ideia acessar o repositorio no github e contribuir com suas ideias para melhorar o codigo.</p>
+                            <p style="font-family:Roboto, sans-serif;">Fique a vontade para entrar em contato comigo para discutimos ideas e aplicações que podem ser implementadas..</p>
+                            <p style="font-family:Roboto, sans-serif;"><a href="https://github.com/Maia-jp/GeneticMaze">GitHub</a></p>
+                        </div>
+                    </div>
+                    <div class="card" style="margin-top:12px;">
+                        <div class="card-header">
+                            <h5 class="mb-0" style="color:#6d28aa;font-family:ABeeZee, sans-serif;">Code structure<br></h5>
+                        </div>
+                        <div class="card-body">
+                            <p style="font-family:Roboto, sans-serif;"></p><img class="img-fluid" src="Documentation/Diagram/diagram.jpg" style="background-image:url(&quot;assets/img/diagram.jpg&quot;);"><a class="card-link"
+                                href="Documentation/diagram.html" style="font-family:Roboto, sans-serif;">Code diagram&nbsp;</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-basic" style="margin:12px;">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-github"></i></a><a href="info.html"><i class="icon ion-information-circled"></i></a></div>
+            <p class="copyright" style="font-family:Roboto, sans-serif;font-size:16px;">Coded By Joao P Maia</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

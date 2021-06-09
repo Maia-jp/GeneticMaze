@@ -11,6 +11,11 @@ The instructions here will make the project run on your machine. For more code a
  - An average computer
  - A browser
   
+### Contribuing
+
+Contribuitons are very wellcome. I believe this project is a good opportunity to learn how genetic algorithms work. Modifying and adding new features is always a process of learning.
+If you are interested in contributing please check CONTRIBUTING.md
+
 ### Installing
 
 The program was made entirely using pure javascript (including some graphic libraries listed below) so to run it just download the entire folder and open the file *'main.html'*
@@ -35,7 +40,7 @@ All parameters have their Default value and a description
 
 ## Author
 
-* **João P Maia** - *the complete program* 
+* **João P Maia** - *Owner, first version* 
 
 ## License
 
