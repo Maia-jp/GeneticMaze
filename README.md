@@ -11,6 +11,10 @@ The instructions here will make the project run on your machine. For more code a
  - An average computer
  - A browser
   
+
+### Web Implementation
+You can find a online implementation [here]([http://www.grad.inf.puc-rio.br/~c1920354/GeneticMaze/main.html]) 
+
 ### Installing
 
 The program was made entirely using pure javascript (including some graphic libraries listed below) so to run it just download the entire folder and open the file *'main.html'*
@@ -26,6 +30,11 @@ This is an example of a parameter:
     'lineSize': 0.3,  //Size of the line dividing the cells of the grid || Default is 0.3
 To change it, just change the value after the colon, in this case it would be 0.3
 All parameters have their Default value and a description
+
+### Contribuing
+
+Contribuitons are very wellcome. I believe this project is a good opportunity to learn how genetic algorithms work. Modifying and adding new features is always a process of learning.
+If you are interested in contributing please check open an Issue/PR
 
 
 ## Libraries used in this project
