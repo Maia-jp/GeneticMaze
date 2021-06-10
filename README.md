@@ -44,7 +44,7 @@ If you are interested in contributing please check open an Issue/PR
 
 ## Author
 
-* **João P Maia** - *the complete program* 
+* **João P Maia** - *Owner, first version* 
 
 ## License
 
