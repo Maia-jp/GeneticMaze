@@ -1,0 +1,14 @@
+Elaborei esse projeto para estudar como os algoritimos geneticos funcionam e programa-los sem utilizar nenhuma biblioteca.
+
+A conclusão do projeto foi a implentacao desses algoritmos para resolver labirintos. 
+
+Acredito que compartilhar esse projeto pode ajudar outras pessoas que se interressam pelo estudo do  tema.
+
+Para os interessados em modificar o projeto ja existente, mantenho um repositório no github com esse codigo.
+
+Qualquer dúvida ou sugestões, favor entrar em contato.
+
+
+
+-Joao P. Maia
+
